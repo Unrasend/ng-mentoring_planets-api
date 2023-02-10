@@ -8,8 +8,8 @@ server.use(middlewares)
 // Add this before server.use(router)
 server.use(jsonServer.rewriter({
     '/api/*': '/$1',
-    "/api/planets": "/users",
-    "/api/planets/:id": "/users/:id"
+    "/api/planets": "/planets",
+    "/api/planets/:id": "/planets/:id"
 }))
 server.use(router)
 server.listen(3000, () => {
